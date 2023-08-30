@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'beauty_container.dart';
 
+// ignore: must_be_immutable
 class ActionBTN extends StatefulWidget {
   final void Function()? function;
   final void Function()? longPress;

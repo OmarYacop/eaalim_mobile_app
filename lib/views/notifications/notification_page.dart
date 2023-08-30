@@ -20,8 +20,6 @@ class NotificationPage extends StatefulWidget {
 }
 
 class _NotificationPageState extends State<NotificationPage> {
-  var data;
-
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
@@ -42,7 +40,7 @@ class _NotificationPageState extends State<NotificationPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     BackButton(
-                      color: AppColors.white,
+                      color: Colors.white,
                       onPressed: () {
                         Navigator.pop(context);
                       },
@@ -77,7 +75,7 @@ class _NotificationPageState extends State<NotificationPage> {
                 builder: (context, state) {
                   return FutureBuilder(
                     future: Future.delayed(Duration.zero, () async {
-                      data = await context
+                      await context
                           .read<NotificationsCubit>()
                           .getNotifications(context);
                     }),

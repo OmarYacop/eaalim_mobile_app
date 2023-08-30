@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:Eaalim/constants/core/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -68,7 +69,7 @@ Widget buildAppBarWidgetOfChat(BuildContext context, double width,
               : Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    textBox(null, null, 'Eaalim Chat',
+                    textBox(null, null, '${AppString.titleHomePage} Chat',
                         fontSize: 25,
                         fontWeight: FontWeight.w600,
                         color: Colors.white),

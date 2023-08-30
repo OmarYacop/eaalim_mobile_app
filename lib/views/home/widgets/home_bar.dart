@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../constants/core/app_strings.dart';
 import '../../../constants/widgets/avatar.dart';
 import '../../../controllers/notifications_bloc/notifications_bloc.dart';
 import '../../../global.dart';
@@ -22,7 +23,7 @@ Widget buildAppBarHomePage(BuildContext context, double width, double height) {
             children: [
               avatar(width * 0.062, 25),
               const Text(
-                'Eaalim',
+                AppString.titleHomePage,
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -33,38 +34,36 @@ Widget buildAppBarHomePage(BuildContext context, double width, double height) {
                     builder: (context) => const NotificationPage())),
                 icon: BlocBuilder<NotificationsCounterBloc, CounterState>(
                   builder: (context, state) {
-                    return Stack(
+                    return Column(
                       children: [
                         const Icon(
                           Icons.notifications,
                           color: Colors.white,
                           size: 30,
                         ),
-                        if (Global.unreadNotifications>
+                        if (Global.unreadNotifications >
                             0) // Display the bubble if there are unread notifications
-                          Positioned(
-                              top: 0,
-                              right: 0,
-                              child: SizedBox(
-                                height: height / 36,
-                                child: FittedBox(
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.red,
-                                    radius: 7,
-                                    child: Text(
-                                      Global.unreadNotifications <= 99
-                                          ? Global.unreadNotifications
-                                              .toString()
-                                          : '99+',
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ))
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Global.darkMode!
+                                    ? Colors.grey[850]
+                                    : Colors.white,
+                                borderRadius: BorderRadius.circular(5)),
+                            width: width * 0.08,
+                            alignment: Alignment.center,
+                            child: Text(
+                              Global.unreadNotifications <= 99
+                                  ? Global.unreadNotifications.toString()
+                                  : '99+',
+                              style: TextStyle(
+                                color: Global.darkMode!
+                                    ? Colors.white
+                                    : Colors.grey[850],
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
                       ],
                     );
                   },

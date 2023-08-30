@@ -33,7 +33,6 @@ class _HomePageState extends State<HomePage>
               double width = constraints.maxWidth;
               double height = constraints.maxHeight;
               homeSessions.clear;
-
               return Column(
                 children: [
                   buildAppBarHomePage(context, width, height),

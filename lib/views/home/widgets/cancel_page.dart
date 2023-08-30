@@ -36,7 +36,7 @@ Widget cancelClass(
                 : const Icon(Icons.radio_button_off),
             text: 'Choose date and time',
             textColor:
-                selectedOption == 1 ? AppColors.lightBlack : AppColors.primary,
+                selectedOption == 1 ? Colors.black54 : AppColors.primary,
             bg: selectedOption == 1
                 ? AppColors.primary
                 : const Color(0xfff0f0f2)),
@@ -54,7 +54,7 @@ Widget cancelClass(
             width: width * 0.8,
             iconPadding: width * 0.07,
             textColor:
-                selectedOption == 2 ? AppColors.lightBlack : AppColors.primary,
+                selectedOption == 2 ? Colors.black54 : AppColors.primary,
             bg: selectedOption == 2
                 ? AppColors.primary
                 : const Color(0xfff0f0f2)),
@@ -104,12 +104,12 @@ Widget cancelClass(
                     )))
                 : ActionBTN(
                     function: submit,
-                    prefixIcon: Icon(
+                    prefixIcon: const Icon(
                       Icons.send,
-                      color: AppColors.white,
+                      color: Colors.white,
                     ),
                     text: 'Send Request',
-                    textColor: AppColors.white,
+                    textColor: Colors.white,
                     fontSize: 15,
                     fontWeight: FontWeight.normal,
                     height: null,

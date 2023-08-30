@@ -133,8 +133,6 @@ class SessionCubit extends Cubit<SessionState> {
           note: data['note'],
           video: data['video'].first),
     );
-    print('---------------');
-    print(response);
     if (response.toString().toLowerCase().contains('too large')) {
       toastInfo(msg: 'Selected File Is Too Large');
     } else if (response['msg'] != null) {

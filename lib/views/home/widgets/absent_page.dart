@@ -44,9 +44,9 @@ Widget absentPage(
                               });
                             }
                           },
-                          prefixIcon: Icon(
+                          prefixIcon: const Icon(
                             Icons.upload,
-                            color: AppColors.black,
+                            color: Colors.black,
                           ),
                           text: context
                                   .read<AbsentBloc>()
@@ -102,12 +102,12 @@ Widget absentPage(
                       )))
                   : ActionBTN(
                       function: submit,
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.send,
-                        color: AppColors.white,
+                        color: Colors.white,
                       ),
                       text: 'Make Student Absent',
-                      textColor: AppColors.white,
+                      textColor: Colors.white,
                       fontSize: 15,
                       fontWeight: FontWeight.normal,
                       height: null,

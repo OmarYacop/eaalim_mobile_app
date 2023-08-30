@@ -8,6 +8,7 @@ import '../../../controllers/notifications_cubit/notifications_cubit.dart';
 import '../../../global.dart';
 import 'notifications_status.dart';
 
+// ignore: must_be_immutable
 class NotificationMessage extends StatefulWidget {
   final double width;
   final double height;

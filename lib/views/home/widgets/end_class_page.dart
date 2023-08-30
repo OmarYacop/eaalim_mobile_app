@@ -63,9 +63,9 @@ Widget endClass(
                 builder: (context, state) {
                   return ActionBTN(
                       function: upload,
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.upload,
-                        color: AppColors.black,
+                        color: Colors.black,
                       ),
                       text: context.read<EndBloc>().state.filesPaths.isEmpty
                           ? 'Upload'
@@ -109,7 +109,7 @@ Widget endClass(
                     )))
                 : ActionBTN(
                     function: submit,
-                    prefixIcon: Icon(Icons.send, color: AppColors.black),
+                    prefixIcon: const Icon(Icons.send, color: Colors.black),
                     text: 'Send',
                     textColor: AppColors.primary,
                     bg: Global.darkMode! ? Colors.white : Colors.grey[200],

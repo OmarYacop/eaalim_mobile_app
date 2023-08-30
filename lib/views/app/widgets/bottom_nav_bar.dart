@@ -47,21 +47,21 @@ class BottomNavBarWidget extends StatelessWidget {
                   width,
                   height,
                   navState,
-                  AppColors.grey.withAlpha(150),
+                  Colors.grey.withAlpha(150),
                   0,
                   [
                     Icons.home,
                     Icons.home_outlined,
                   ],
                   'Home',
-                  AppColors.grey,
+                  Colors.grey,
                   iconImageDistance: 11),
               bottomNavBarBTN(
                   context,
                   width,
                   height,
                   navState,
-                  AppColors.grey.withAlpha(150),
+                  Colors.grey.withAlpha(150),
                   1,
                   [
                     Icons.chat,
@@ -75,7 +75,7 @@ class BottomNavBarWidget extends StatelessWidget {
                   width,
                   height,
                   navState,
-                  AppColors.grey.withAlpha(150),
+                  Colors.grey.withAlpha(150),
                   2,
                   [
                     Icons.timelapse,
@@ -89,14 +89,14 @@ class BottomNavBarWidget extends StatelessWidget {
                 width,
                 height,
                 navState,
-                AppColors.grey.withAlpha(150),
+                Colors.grey.withAlpha(150),
                 3,
                 [
                   Icons.person,
                   Icons.person,
                 ],
                 'Profile',
-                AppColors.grey.withAlpha(150),
+                Colors.grey.withAlpha(150),
               ),
             ],
           ),
@@ -147,7 +147,7 @@ class BottomNavBarWidget extends StatelessWidget {
                 ? [
                     Icon(
                       icons[0],
-                      color: !Global.darkMode! ? AppColors.black : Colors.white,
+                      color: !Global.darkMode! ? Colors.black : Colors.white,
                       size: 25,
                     ),
                     SizedBox(
@@ -156,15 +156,14 @@ class BottomNavBarWidget extends StatelessWidget {
                     Text(title,
                         style: TextStyle(
                             fontSize: 13,
-                            color: !Global.darkMode!
-                                ? AppColors.black
-                                : Colors.white,
+                            color:
+                                !Global.darkMode! ? Colors.black : Colors.white,
                             fontWeight: FontWeight.bold))
                   ]
                 : [
                     Icon(
                       icons[1],
-                      color: !Global.darkMode! ? AppColors.black : Colors.white,
+                      color: !Global.darkMode! ? Colors.black : Colors.white,
                       size: 25,
                     ),
                   ],

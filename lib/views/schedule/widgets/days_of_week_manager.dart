@@ -30,14 +30,14 @@ class DaysManager extends StatelessWidget {
           children: [
             Text(
               state.days,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                color: AppColors.white,
+                color: Colors.white,
               ),
             ),
-            Icon(
+            const Icon(
               Icons.more_vert,
-              color: AppColors.white,
+              color: Colors.white,
             ),
           ],
         ),

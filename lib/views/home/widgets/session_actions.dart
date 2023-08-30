@@ -152,9 +152,9 @@ class _SessionActionsState extends State<SessionActions> {
                                         .cancelSession(
                                             context, UserData.isTeacher!, {
                                       'date': DateFormat('yyyy-MM-dd')
-                                          .format(dateTime!),
-                                      'time':
-                                          DateFormat('HH:mm').format(dateTime!),
+                                          .format(dateTime ?? DateTime.now()),
+                                      'time': DateFormat('HH:mm')
+                                          .format(dateTime ?? DateTime.now()),
                                       'class_id':
                                           homeSessions[widget.index!].id,
                                       'type': context
@@ -297,6 +297,9 @@ class _SessionActionsState extends State<SessionActions> {
       ),
       is24HourMode: false,
       minutesInterval: 1,
+      theme: ThemeData(
+        brightness: Global.darkMode! ? Brightness.dark : Brightness.light,
+      ),
       borderRadius: const BorderRadius.all(Radius.circular(16)),
       transitionBuilder: (context, anim1, anim2, child) {
         return FadeTransition(

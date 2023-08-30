@@ -111,8 +111,8 @@ class LogInScreenWidget extends StatelessWidget {
                                 ? "Login As Teacher"
                                 : "Login As Student",
                             textColor: !Global.darkMode!
-                                ? AppColors.lightBlack
-                                : AppColors.white,
+                                ? Colors.black54
+                                : Colors.white,
                             bg: AppColors.primary,
                             width: width * 0.65,
                             fontWeight: FontWeight.bold)

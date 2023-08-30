@@ -1,3 +1,3 @@
 class AppString {
-  static const titleHomePage = 'Eaalim';
+  static const titleHomePage = 'Quran Talent';
 }
