@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'api/repository/repos.dart';
 import 'common/routes/pages_route_bloc.dart';
-import 'controllers/notifications_cubit/notifications_cubit.dart';
 import 'global.dart';
 
 void main() async {

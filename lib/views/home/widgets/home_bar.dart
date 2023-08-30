@@ -34,7 +34,7 @@ Widget buildAppBarHomePage(BuildContext context, double width, double height) {
                     builder: (context) => const NotificationPage())),
                 icon: BlocBuilder<NotificationsCounterBloc, CounterState>(
                   builder: (context, state) {
-                    return Column(
+                    return Stack(
                       children: [
                         const Icon(
                           Icons.notifications,
@@ -43,25 +43,12 @@ Widget buildAppBarHomePage(BuildContext context, double width, double height) {
                         ),
                         if (Global.unreadNotifications >
                             0) // Display the bubble if there are unread notifications
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Global.darkMode!
-                                    ? Colors.grey[850]
-                                    : Colors.white,
-                                borderRadius: BorderRadius.circular(5)),
-                            width: width * 0.08,
-                            alignment: Alignment.center,
-                            child: Text(
-                              Global.unreadNotifications <= 99
-                                  ? Global.unreadNotifications.toString()
-                                  : '99+',
-                              style: TextStyle(
-                                color: Global.darkMode!
-                                    ? Colors.white
-                                    : Colors.grey[850],
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                              ),
+                          const Positioned(
+                            right: 2,
+                            top: 0,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.red,
+                              radius: 6,
                             ),
                           )
                       ],

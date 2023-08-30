@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:Eaalim/constants/core/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,6 +8,7 @@ import 'package:intl/intl.dart';
 
 import '../../../api/models/chat_model/chat.dart';
 import '../../../common/services/similarity.dart';
+import '../../../constants/core/app_strings.dart';
 import '../../../constants/core/theme/app_colors.dart';
 import '../../../constants/core/theme/images.dart';
 import '../../../constants/widgets/base_text_widget.dart';
